@@ -18,15 +18,19 @@ class stormtrooper():
     def __str__(self):
         return 'Nombre: ' + self.nombre + 'rango: ' + self.rango + 'codigo: ' + self.codigo + 'cohorte: ' + self.cohorte + 'siglo: ' + self.siglo + 'escuadra: ' + self.escuadra + 'numero: ' + self.numero
 
-lista_stormtrooper = []
-for i in range(4):
-    nombre = random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + '-'
-    for j in range(4):
-        nombre += str(random.randint(0,9))
+def experimentacion(n):
+    lista_stormtrooper = []
+    for i in range(n):
+        nombre = random.choice(string.ascii_uppercase) + random.choice(string.ascii_uppercase) + '-'
+        for j in range(4):
+            nombre += str(random.randint(0,9))
 
 
-    lista_stormtrooper.append(stormtrooper(nombre, 'Soldado'))
+        lista_stormtrooper.append(stormtrooper(nombre, 'Soldado'))
 
-for i in lista_stormtrooper:
-    print(i)
+    for i in lista_stormtrooper:
+        print(i)
 
+    return lista_stormtrooper
+
+a = experimentacion(10)
