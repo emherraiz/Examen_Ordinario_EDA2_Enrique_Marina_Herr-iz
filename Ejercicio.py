@@ -16,7 +16,7 @@ class stormtrooper():
         self.numero = temp[3]
 
     def __str__(self):
-        return 'Nombre: ' + self.nombre + 'rango: ' + self.rango + 'codigo: ' + self.codigo + 'cohorte: ' + self.cohorte + 'siglo: ' + self.siglo + 'escuadra: ' + self.escuadra + 'numero: ' + self.numero
+        return '\nNombre: ' + self.nombre + '\nRango: ' + self.rango + '\nCodigo: ' + self.codigo + '\nCohorte: ' + self.cohorte + '\nSiglo: ' + self.siglo + '\nEscuadra: ' + self.escuadra + '\nNumero: ' + self.numero
 
 def experimentacion(n):
     lista_stormtrooper = []
