@@ -1,8 +1,16 @@
 import string, random
+import pytest
+class Nombre:
+    def init(self, nombre):
+        self.nombre = nombre
+
+class Rango:
+    def init(self, rango):
+        self.rango = rango
 class stormtrooper():
     def __init__(self, nombre, rango):
-        self.nombre = nombre
-        self.rango = rango
+        super().__init__(nombre)
+        super().__init__(rango)
         print('Stormtrooper se ha creado con éxito')
         self.calificacion()
 
