@@ -22,4 +22,4 @@ for artefacto in artefactos_valiosos:
 
 # Modificar el precio de un artefacto valioso
 artefacto1.precio = 2.0
-print("El nuevo precio de la conserva de tomate es: ",artefacto1.precio) 
+print("El nuevo precio de la conserva de tomate es: ",artefacto1.precio)
