@@ -11,7 +11,7 @@ class stormtrooper(Nombre, Rango):
     def __init__(self, nombre, rango):
         super().__init__(nombre)
         super().__init__(rango)
-        print('Stormtrooper se ha creado con éxito')
+        print(f'Stormtrooper {self.nombre} se ha creado con éxito')
         self.calificacion()
 
     def calificacion(self):
