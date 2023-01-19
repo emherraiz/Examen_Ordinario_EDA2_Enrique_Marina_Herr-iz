@@ -1,20 +1,19 @@
+import string, random
+import pytest
+from main import Stormtrooper, experimentacion
 
-'''
-def test_calificacion():
-    # Create a Stormtrooper object
-    nombre = 'AB-1234'
-    stormtrooper = stormtrooper.Stormtrooper(nombre, 'Soldado')
+def test_experimentacion():
+    n = 10
+    lista_stormtrooper = experimentacion(n)
+    assert len(lista_stormtrooper) == n
+    for i in lista_stormtrooper:
+        assert isinstance(i, Stormtrooper)
 
-    # Test the calificacion method
-    stormtrooper.calificacion()
-    assert stormtrooper.codigo == 'AB'
-    assert stormtrooper.cohorte == '1'oooo
-'''
 
-def test_stormtrooper_calificacion():
-    stormtrooper = stormtrooper.Stormtrooper("TK-8654", "Capitán")
-    assert stormtrooper.calificacion() == "Codigo de legion: TK, Identificador de cohorte: 8, Identificador de siglo: 6, Identificador de escuadra: 5, Numero de trooper: 4"
-
-if __name__ == "main":
-    import pytest
-    pytest.main()
+def test_nombre_stormtrooper_valido():
+    nombres_stormtroopers = [stormtrooper.nombre for stormtrooper in experimentacion(5)]
+    for nombre in nombres_stormtroopers:
+        assert nombre[2] == '-'
+        assert nombre[:2].isalpha() and nombre[:2].isupper()
+        assert nombre[3:].isnumeric()
+        assert len(nombre) == 7
