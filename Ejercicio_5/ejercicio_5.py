@@ -1,7 +1,7 @@
 def mochila_01(precio, pesos, pesomaximo):
     n = len(precio)
     # Crear una tabla de tamaño (n + 1) x (W + 1)
-    tabla = [[0 for  in range(pesomaximo + 1)] for  in range(n + 1)]
+    tabla = [[0 for i in range(pesomaximo + 1)] for j in range(n + 1)]
     # Llenar la tabla iterativamente
     for i in range(1, n + 1):
         for w in range(1, peso_maximo + 1):
