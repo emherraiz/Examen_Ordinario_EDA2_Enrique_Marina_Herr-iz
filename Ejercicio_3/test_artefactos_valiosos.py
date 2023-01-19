@@ -18,6 +18,6 @@ def test_orden_artefactos():
     assert artefactos_valiosos[2].fecha_caducidad == '2022-12-31'
 
 def test_modificar_precio():
-    artefacto1 = ej3.ArtefactosValiosos(1, "Conserva de tomate", 2.5, "2022-12-31")
+    artefacto1 = ArtefactosValiosos(1, "Conserva de tomate", 2.5, "2022-12-31")
     artefacto1.precio = 2.0
     assert artefacto1.precio == 2.0
