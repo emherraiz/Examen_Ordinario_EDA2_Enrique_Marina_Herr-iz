@@ -1,4 +1,6 @@
 
+from artefactosvaliosos import ArtefactosValiosos
+
 def test_crear_artefactos():
     artefacto1 = ArtefactosValiosos(1, "Conserva de tomate", 2.5, "2022-12-31")
     artefacto2 = ArtefactosValiosos(2, "Conserva de pimientos", 3.0, "2022-11-30")
@@ -18,6 +20,6 @@ def test_orden_artefactos():
     assert artefactos_valiosos[2].fecha_caducidad == '2022-12-31'
 
 def test_modificar_precio():
-    artefacto1 = ej3.ArtefactosValiosos(1, "Conserva de tomate", 2.5, "2022-12-31")
+    artefacto1 = ArtefactosValiosos(1, "Conserva de tomate", 2.5, "2022-12-31")
     artefacto1.precio = 2.0
     assert artefacto1.precio == 2.0
