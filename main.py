@@ -7,3 +7,5 @@ from Ejercicio_7 import ejercicio_7
 from Ejercicio_8 import ejercicio_8
 
 if __name__ == "__main__":
+    print('Ejercicio 1 y 2')
+    
