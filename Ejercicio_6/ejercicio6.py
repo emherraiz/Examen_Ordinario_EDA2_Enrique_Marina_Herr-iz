@@ -1,3 +1,5 @@
+import random
+import string 
 class StormtrooperManager:
     def __init__(self):
         self.legiones = ['FL', 'TF', 'TK', 'CT', 'FN', 'FO']
@@ -11,7 +13,7 @@ class StormtrooperManager:
             codigo = legión + '-'
             for j in range(4):
                 codigo += str(random.randint(0, 9))
-            stormtrooper = Stormtrooper(codigo)
+            stormtrooper = stormtrooper.Stormtrooper(codigo)
             self.stormtroopers.append(stormtrooper)
 
     def cargar_stormtroopers(self):
@@ -53,3 +55,6 @@ class StormtrooperManager:
         stormtroopers_digitos = self.obtener_stormtroopers_por_digitos(digitos)
         for stormtrooper in stormtroopers_digitos:
             stormtrooper.asignar_mision(mision)
+
+if __name__ == "__main__":
+    main()
