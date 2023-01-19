@@ -12,7 +12,7 @@ def mochila_01(precio, pesos, pesomaximo):
     return tabla[n][peso_maximo]
 
 # Ejemplo de uso
-precio = [103, 60, 70, 5, 15] 
+precio = [103, 60, 70, 5, 15]
 pesos = [12, 23, 11, 15, 7]
 peso_maximo = 100
 print(mochila_01(precio, pesos, peso_maximo))
