@@ -1,5 +1,4 @@
 import random
-import string 
 class StormtrooperManager:
     def __init__(self):
         self.legiones = ['FL', 'TF', 'TK', 'CT', 'FN', 'FO']
@@ -56,5 +55,3 @@ class StormtrooperManager:
         for stormtrooper in stormtroopers_digitos:
             stormtrooper.asignar_mision(mision)
 
-if __name__ == "__main__":
-    main()
