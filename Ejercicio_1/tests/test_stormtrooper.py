@@ -1,3 +1,5 @@
+from Ejercicio_1 import Stormtrooper
+import pytest
 def test_calificacion():
     # Create a Stormtrooper object
     nombre = 'AB-1234'
