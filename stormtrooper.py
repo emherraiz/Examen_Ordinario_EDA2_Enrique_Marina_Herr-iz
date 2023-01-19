@@ -1,13 +1,13 @@
 import string, random
 import pytest
 class Nombre:
-    def init(self, nombre):
+    def __init__(self, nombre):
         self.nombre = nombre
 
 class Rango:
-    def init(self, rango):
+    def __init__(self, rango):
         self.rango = rango
-class stormtrooper():
+class stormtrooper(Nombre, Rango):
     def __init__(self, nombre, rango):
         super().__init__(nombre)
         super().__init__(rango)
