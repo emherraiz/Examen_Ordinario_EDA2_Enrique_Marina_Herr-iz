@@ -76,4 +76,16 @@ def test_StormtrooperManager_eliminar_stormtrooper():
     assert stormtrooper_manager.eliminar_stormtrooper("FL-1234") == False
     stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digitos("123")
     assert len(stormtroopers_digitos) == 1
-    assert stormtroopers_digitos[0].codigo == "TF-
+    assert stormtroopers_digitos[0].codigo == "TF-1234"
+    assert stormtroopers_digitos[1].código == "FL-1234"
+    assert len(stormtroopers_digitos) == 2
+
+def test_StormtrooperManager_asignar_mision():
+    stormtrooper_manager = StormtrooperManager()
+    stormtrooper_manager.generar_stormtroopers()
+    stormtrooper_manager.cargar_stormtroopers()
+    stormtrooper_manager.asignar_mision("234", "Misión X")
+    stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digitos("234")
+    assert stormtroopers_digitos[0].mision == "Misión X"
+    assert stormtroopers_digitos[1].mision == "Misión X"
+    assert len(stormtroopers_digitos) == 2
