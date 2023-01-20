@@ -12,3 +12,5 @@ if __name__ == "__main__":
     pytest.main(['-v', 'Ejercicio_1_y_2/test_stormtrooper.py'])
     print('Ejercicio 3')
     pytest.main(['-v', 'Ejercicio_3/test_artefactos_valiosos.py'])
+
+    
