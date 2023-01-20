@@ -52,4 +52,28 @@ def test_StormtrooperManager_asignar_mision(self):
     stormtrooper_manager.generar_stormtroopers()
     stormtrooper_manager.cargar_stormtroopers()
     stormtrooper_manager.asignar_mision("001", "Mision 1")
-    stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digit
+    stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digittos("123")
+
+    assert len(stormtroopers_digitos) == 2
+    assert stormtroopers_digitos[0].codigo == "FL-1234"
+    assert stormtroopers_digitos[1].codigo == "TF-5123"
+
+def test_StormtrooperManager_asignar_mision():
+    stormtrooper_manager = StormtrooperManager()
+    stormtrooper_manager.generar_stormtroopers()
+    stormtrooper_manager.cargar_stormtroopers()
+    stormtrooper_manager.asignar_mision("123", "Misión en Tatooine")
+    stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digitos("123")
+    for stormtrooper in stormtroopers_digitos:
+        assert stormtrooper.mision == "Misión en Tatooine"
+
+
+def test_StormtrooperManager_eliminar_stormtrooper():
+    stormtrooper_manager = StormtrooperManager()
+    stormtrooper_manager.generar_stormtroopers()
+    stormtrooper_manager.cargar_stormtroopers()
+    assert stormtrooper_manager.eliminar_stormtrooper("FL-1234") == True
+    assert stormtrooper_manager.eliminar_stormtrooper("FL-1234") == False
+    stormtroopers_digitos = stormtrooper_manager.obtener_stormtroopers_por_digitos("123")
+    assert len(stormtroopers_digitos) == 1
+    assert stormtroopers_digitos[0].codigo == "TF-
