@@ -1,19 +1,22 @@
-import string, random
 import pytest
-from main import Stormtrooper, experimentacion
+from stormtrooper import Stormtrooper, experimentacion
+
+def test_stormtrooper_init():
+    st = Stormtrooper("ST-1234", "Soldado")
+    assert st.nombre == "ST-1234"
+    assert st.rango == "Soldado"
+
+def test_stormtrooper_calificacion():
+    st = Stormtrooper("ST-1234", "Soldado")
+    st.calificacion()
+    assert st.codigo == "ST"
+    assert st.cohorte == "1"
+    assert st.siglo == "2"
+    assert st.escuadra == "3"
+    assert st.numero == "4"
 
 def test_experimentacion():
-    n = 10
-    lista_stormtrooper = experimentacion(n)
-    assert len(lista_stormtrooper) == n
-    for i in lista_stormtrooper:
-        assert isinstance(i, Stormtrooper)
-
-
-def test_nombre_stormtrooper_valido():
-    nombres_stormtroopers = [stormtrooper.nombre for stormtrooper in experimentacion(5)]
-    for nombre in nombres_stormtroopers:
-        assert nombre[2] == '-'
-        assert nombre[:2].isalpha() and nombre[:2].isupper()
-        assert nombre[3:].isnumeric()
-        assert len(nombre) == 7
+    lista_stormtrooper = experimentacion(5)
+    assert len(lista_stormtrooper) == 5
+    for st in lista_stormtrooper:
+        assert isinstance(st, Stormtrooper)

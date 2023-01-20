@@ -1,5 +1,4 @@
 import string, random
-import pytest
 class Nombre:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -15,13 +14,21 @@ class Stormtrooper(Nombre, Rango):
         self.calificacion()
 
     def calificacion(self):
-        temp = self.nombre.split('-')
-        self.codigo = temp[0]
-        temp = temp[1]
-        self.cohorte = temp[0]
-        self.siglo = temp[1]
-        self.escuadra = temp[2]
-        self.numero = temp[3]
+        if '-' not in self.nombre:
+            self.codigo = self.nombre[0:2]
+            self.cohorte = self.nombre[2]
+            self.siglo = self.nombre[3]
+            self.escuadra = self.nombre[4]
+            self.numero = self.nombre[5]
+
+        else:
+            temp = self.nombre.split('-')
+            self.codigo = temp[0]
+            temp = temp[1]
+            self.cohorte = temp[0]
+            self.siglo = temp[1]
+            self.escuadra = temp[2]
+            self.numero = temp[3]
 
     def __str__(self):
         return '\nNombre: ' + self.nombre + '\nRango: ' + self.rango + '\nCodigo: ' + self.codigo + '\nCohorte: ' + self.cohorte + '\nSiglo: ' + self.siglo + '\nEscuadra: ' + self.escuadra + '\nNumero: ' + self.numero
