@@ -8,8 +8,10 @@ class Rango:
         self.rango = rango
 class Stormtrooper(Nombre, Rango):
     def __init__(self, nombre, rango):
-        super().__init__(nombre)
-        super().__init__(rango)
+        # super().__init__(nombre)
+        # super().__init__(rango)
+        self.nombre = nombre
+        self.rango = rango
         print(f'Stormtrooper {self.nombre} se ha creado con éxito')
         self.calificacion()
 
@@ -48,3 +50,4 @@ def experimentacion(n):
 
     return lista_stormtrooper
 
+a = experimentacion(5)
