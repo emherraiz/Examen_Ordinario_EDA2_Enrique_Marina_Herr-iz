@@ -12,5 +12,9 @@ if __name__ == "__main__":
     pytest.main(['-v', 'Ejercicio_1_y_2/test_stormtrooper.py'])
     print('Ejercicio 3')
     pytest.main(['-v', 'Ejercicio_3/test_artefactos_valiosos.py'])
+    print('Ejercicio 4')
+    pytest.main(['-v', 'Ejercicio_4/test_usar_la_fuerza.py'])
+    print('Ejercicio 5')
+    pytest.main(['-v', 'Ejercicio_5/test_mochila_01.py'])
+    print('Ejercicio 6')
 
-    
