@@ -17,4 +17,5 @@ if __name__ == "__main__":
     print('Ejercicio 5')
     pytest.main(['-v', 'Ejercicio_5/test_mochila_01.py'])
     print('Ejercicio 6')
+    pytest.main(['-v', 'Ejercicio_6/test_StromtrooperManager.py'])
 
